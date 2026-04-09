@@ -509,7 +509,118 @@
   }
 
 
-  
+  /* ---- MOBILE FIXES ---- */
+  body { overflow-x: hidden; }
+  img { max-width: 100%; }
+
+  .proof-split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 64px; }
+  .api-specs-grid { grid-template-columns: repeat(6, 1fr); }
+
+  .expertise-row .exp-pill,
+  .proof-tag,
+  .contact-role-tag,
+  .stack-tag { overflow-wrap: anywhere; }
+
+  @media (max-width: 900px) {
+    .proof-split-grid { grid-template-columns: 1fr; gap: 24px; }
+    .api-specs-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  }
+
+  @media (max-width: 480px) {
+    .proof-split-grid { grid-template-columns: 1fr; gap: 20px; }
+    .api-specs-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    .expertise-row .exp-pill,
+    .proof-tag,
+    .contact-role-tag,
+    .stack-tag {
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      padding: 6px 10px;
+    }
+    .section-inner,
+    .contact-inner { overflow-x: hidden; }
+  }
+
+
+  /* ---- MOBILE FIXES V4 ---- */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  .proof-split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .api-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .mock-timing,
+  .mock-pred,
+  .mock-api,
+  .ep-table,
+  .specs-grid,
+  .build-body,
+  .hero-grid,
+  .about-grid,
+  .strengths-grid,
+  .summary-grid,
+  .contact-links {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  @media (max-width: 768px) {
+    .proof-split-grid {
+      grid-template-columns: 1fr !important;
+      gap: 20px !important;
+    }
+
+    .api-specs-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .proof-split-grid,
+    .api-specs-grid,
+    .specs-grid,
+    .build-body,
+    .hero-grid,
+    .about-grid,
+    .strengths-grid,
+    .summary-grid,
+    .contact-links,
+    .mock-timing,
+    .mock-pred,
+    .mock-api,
+    .ep-table {
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+    }
+
+    .expertise-row .exp-pill,
+    .proof-tag,
+    .contact-role-tag,
+    .stack-tag {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      padding: 6px 10px;
+    }
+  }
+
+</style>
 </head>
 
 <body>
@@ -1036,12 +1147,6 @@
 <script>
   function applyViewportFixes() {
     const w = window.innerWidth || document.documentElement.clientWidth;
-
-    document.documentElement.style.overflowX = 'hidden';
-    document.body.style.overflowX = 'hidden';
-    document.documentElement.style.maxWidth = '100vw';
-    document.body.style.maxWidth = '100vw';
-
     const proof = document.querySelector('.proof-split-grid');
     if (proof) {
       proof.style.display = 'grid';
@@ -1054,25 +1159,12 @@
 
     document.querySelectorAll('.api-specs-grid').forEach((el) => {
       el.style.display = 'grid';
-      if (w <= 480) {
-        el.style.gridTemplateColumns = 'repeat(2, 1fr)';
-      } else if (w <= 900) {
-        el.style.gridTemplateColumns = 'repeat(3, 1fr)';
-      } else {
-        el.style.gridTemplateColumns = 'repeat(6, 1fr)';
-      }
+      el.style.gridTemplateColumns = w <= 768 ? 'repeat(2, 1fr)' : 'repeat(6, 1fr)';
       el.style.width = '100%';
       el.style.maxWidth = '100%';
       el.style.minWidth = '0';
     });
-
-    document.querySelectorAll('.mock-timing, .mock-pred, .mock-api, .ep-table, .specs-grid, .build-body, .hero-grid, .about-grid, .strengths-grid, .summary-grid, .contact-links')
-      .forEach((el) => {
-        el.style.maxWidth = '100%';
-        el.style.minWidth = '0';
-      });
   }
-
   window.addEventListener('load', applyViewportFixes);
   window.addEventListener('resize', applyViewportFixes);
 </script>

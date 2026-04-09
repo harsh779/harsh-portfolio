@@ -620,6 +620,42 @@
     }
   }
 
+
+  /* ---- REMOVE HEADER LOGO ONLY ---- */
+  .nav-logo { display: none !important; }
+  .nav-inner { justify-content: flex-end; }
+
+  @media (max-width: 900px) {
+    #site-header { display: none !important; }
+  }
+
+
+  /* ---- SPACING REFINEMENTS ---- */
+  .nav-inner { justify-content: flex-end; gap: 18px; }
+  .avail-badge {
+    padding: 5px 10px;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+
+  .contact-inner { padding: 72px 48px 64px; }
+  .contact-h2 { margin-top: 10px; }
+  .contact-role-tags { margin-top: 18px; }
+  .contact-sub { margin-top: 20px; }
+  .contact-links { margin-top: 28px; }
+
+  @media (max-width: 900px) {
+    .contact-inner { padding: 52px 24px 48px; }
+  }
+
+  @media (max-width: 480px) {
+    .contact-inner { padding: 44px 16px 40px; }
+    .contact-role-tags { margin-top: 14px; }
+    .contact-sub { margin-top: 16px; }
+    .contact-links { margin-top: 22px; }
+  }
+
 </style>
 </head>
 
@@ -634,7 +670,7 @@
       <a href="#builds">Selected Work</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div class="avail-badge"><span class="dot"></span> Open to Select Roles</div>
+    <div class="avail-badge"><span class="dot"></span> Available</div>
   </div>
 </header>
 

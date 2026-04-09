@@ -509,39 +509,7 @@
   }
 
 
-  /* ---- MOBILE FIXES ---- */
-  body { overflow-x: hidden; }
-  img { max-width: 100%; }
-
-  .proof-split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 64px; }
-  .api-specs-grid { grid-template-columns: repeat(6, 1fr); }
-
-  .expertise-row .exp-pill,
-  .proof-tag,
-  .contact-role-tag,
-  .stack-tag { overflow-wrap: anywhere; }
-
-  @media (max-width: 900px) {
-    .proof-split-grid { grid-template-columns: 1fr; gap: 24px; }
-    .api-specs-grid { grid-template-columns: repeat(3, 1fr) !important; }
-  }
-
-  @media (max-width: 480px) {
-    .proof-split-grid { grid-template-columns: 1fr; gap: 20px; }
-    .api-specs-grid { grid-template-columns: repeat(2, 1fr) !important; }
-    .expertise-row .exp-pill,
-    .proof-tag,
-    .contact-role-tag,
-    .stack-tag {
-      font-size: 10px;
-      letter-spacing: 0.06em;
-      padding: 6px 10px;
-    }
-    .section-inner,
-    .contact-inner { overflow-x: hidden; }
-  }
-
-</style>
+  
 </head>
 
 <body>
@@ -798,7 +766,7 @@
       </div>
     </div>
 
-    <div class="proof-split-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:64px;">
+    <div class="proof-split-grid" style="margin-bottom:64px;">
       <div>
         <div class="section-label">Scoring System</div>
         <div style="margin-top:16px;">
@@ -881,7 +849,7 @@
       </div>
     </div>
 
-    <div class="specs-grid dark api-specs-grid" style="grid-template-columns:repeat(6,1fr);">
+    <div class="specs-grid dark api-specs-grid">
       <div class="spec-cell" style="border-right:1px solid #333;background:#0f0f0f;"><div class="spec-num" style="color:var(--y);">16</div><div class="section-label light">Topics</div></div>
       <div class="spec-cell" style="border-right:1px solid #333;background:#111;"><div class="spec-num" style="color:var(--y);">14</div><div class="section-label light">Endpoints</div></div>
       <div class="spec-cell" style="border-right:1px solid #333;background:#0f0f0f;"><div class="spec-num" style="color:var(--y);">3.7Hz</div><div class="section-label light">SSE rate</div></div>
@@ -1064,6 +1032,51 @@
     document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 10);
   });
 </script>
+
+<script>
+  function applyViewportFixes() {
+    const w = window.innerWidth || document.documentElement.clientWidth;
+
+    document.documentElement.style.overflowX = 'hidden';
+    document.body.style.overflowX = 'hidden';
+    document.documentElement.style.maxWidth = '100vw';
+    document.body.style.maxWidth = '100vw';
+
+    const proof = document.querySelector('.proof-split-grid');
+    if (proof) {
+      proof.style.display = 'grid';
+      proof.style.gridTemplateColumns = w <= 768 ? '1fr' : '1fr 1fr';
+      proof.style.gap = w <= 768 ? '20px' : '32px';
+      proof.style.width = '100%';
+      proof.style.maxWidth = '100%';
+      proof.style.minWidth = '0';
+    }
+
+    document.querySelectorAll('.api-specs-grid').forEach((el) => {
+      el.style.display = 'grid';
+      if (w <= 480) {
+        el.style.gridTemplateColumns = 'repeat(2, 1fr)';
+      } else if (w <= 900) {
+        el.style.gridTemplateColumns = 'repeat(3, 1fr)';
+      } else {
+        el.style.gridTemplateColumns = 'repeat(6, 1fr)';
+      }
+      el.style.width = '100%';
+      el.style.maxWidth = '100%';
+      el.style.minWidth = '0';
+    });
+
+    document.querySelectorAll('.mock-timing, .mock-pred, .mock-api, .ep-table, .specs-grid, .build-body, .hero-grid, .about-grid, .strengths-grid, .summary-grid, .contact-links')
+      .forEach((el) => {
+        el.style.maxWidth = '100%';
+        el.style.minWidth = '0';
+      });
+  }
+
+  window.addEventListener('load', applyViewportFixes);
+  window.addEventListener('resize', applyViewportFixes);
+</script>
+
 </body>
 
 </html>

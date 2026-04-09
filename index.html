@@ -306,108 +306,109 @@
 
   @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
-  /* ---- TABLET ---- */
+  /* ---- GRID CLASSES (replacing inline styles) ---- */
+  .specs-grid-4 { grid-template-columns: repeat(4, 1fr); }
+  .specs-grid-6 { grid-template-columns: repeat(6, 1fr); }
+  .scoring-pred-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 32px; margin-bottom: 64px;
+  }
+
+  /* ---- PREVENT HORIZONTAL OVERFLOW GLOBALLY ---- */
+  html, body { overflow-x: hidden; max-width: 100%; }
+  section, header, footer { max-width: 100%; overflow-x: hidden; }
+
+  /* ---- TABLET (≤900px) ---- */
   @media (max-width: 900px) {
-    /* Nav */
     .nav-inner { padding: 0 24px; }
     nav { display: none; }
     .avail-badge { font-size: 9px; padding: 5px 10px; }
 
-    /* Hero */
     .hero-inner { padding: 48px 24px 64px; }
     .hero-grid { grid-template-columns: 1fr; gap: 40px; margin-top: 32px; }
-    .hero-stats { grid-template-columns: 1fr 1fr; }
 
-    /* Builds */
+    .specs-grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .specs-grid-6 { grid-template-columns: repeat(3, 1fr); }
+
     .build-header { grid-template-columns: 64px 1fr; gap: 20px; }
     .build-num { font-size: 80px; }
     .build-body { grid-template-columns: 1fr; gap: 40px; }
+    .scoring-pred-grid { grid-template-columns: 1fr; }
     .stack-row { grid-template-columns: 1fr; gap: 12px; }
 
-    /* Specs grid — 2 cols on tablet */
-    .specs-grid[style*="repeat(4"] { grid-template-columns: repeat(2, 1fr) !important; }
-
-    /* Services */
     .services-head { grid-template-columns: 1fr; gap: 24px; }
     .services-grid { grid-template-columns: 1fr; }
     .service-card { border-right: none; border-bottom: 4px solid var(--b); }
 
-    /* About */
     .about-grid { grid-template-columns: 1fr; gap: 48px; }
     .career-item { grid-template-columns: 1fr; gap: 8px; }
 
-    /* Contact */
     .contact-links { grid-template-columns: 1fr; }
 
-    /* Shared */
     .section-inner { padding: 64px 24px; }
     .contact-inner { padding: 64px 24px; }
   }
 
-  /* ---- MOBILE ---- */
+  /* ---- MOBILE (≤480px) ---- */
   @media (max-width: 480px) {
-    /* Nav */
     .nav-inner { padding: 0 16px; height: 56px; }
     .nav-logo { font-size: 18px; }
     .avail-badge { display: none; }
 
-    /* Hero */
     .hero-inner { padding: 36px 16px 52px; }
     .hero-grid { gap: 32px; margin-top: 24px; }
     .hero-cta { flex-direction: column; gap: 10px; }
-    .btn-primary, .btn-secondary { text-align: center; padding: 14px 20px; width: 100%; }
+    .btn-primary, .btn-secondary { text-align: center; padding: 14px 20px; width: 100%; box-sizing: border-box; }
     .hero-stats { grid-template-columns: 1fr 1fr; gap: 2px; }
     .stat-num { font-size: 38px; }
 
-    /* Sections */
     .section-inner { padding: 48px 16px; }
     .contact-inner { padding: 56px 16px; }
 
-    /* Build sections */
     .build-header { grid-template-columns: 1fr; gap: 16px; }
     .build-num { font-size: 64px; }
     .build-sub { font-size: 17px; }
     .build-links { flex-direction: column; gap: 10px; }
-    .btn-live, .btn-repo { width: 100%; text-align: center; justify-content: center; padding: 14px 20px; }
+    .btn-live, .btn-repo { width: 100%; text-align: center; justify-content: center; padding: 14px 20px; box-sizing: border-box; }
 
-    /* Specs — full width single col on small mobile */
-    .specs-grid[style*="repeat(4"] { grid-template-columns: 1fr 1fr !important; }
+    .specs-grid-4 { grid-template-columns: 1fr 1fr; }
+    .specs-grid-6 { grid-template-columns: repeat(2, 1fr); }
     .spec-cell { padding: 18px 16px; }
 
-    /* Timing mock — scroll horizontally rather than overflow */
-    .mock-timing { overflow-x: auto; }
-    .timing-row { grid-template-columns: 24px 36px 1fr 60px 70px 20px 36px; gap: 6px; font-size: 10px; }
+    /* Timing mock: compress columns to fit, no horizontal scroll */
+    .timing-row {
+      grid-template-columns: 22px 32px 1fr 56px 0px 18px 0px;
+      gap: 4px;
+    }
+    /* Hide lap time and speed on smallest screens */
+    .timing-row .lap-t,
+    .timing-row .spd { display: none; }
+    .mock-hz { display: none; }
 
-    /* Mock API */
-    .code-block { font-size: 10px; }
+    .code-block { font-size: 10px; padding: 12px; }
     .ep-grid { grid-template-columns: 1fr; }
     .ep-cell:nth-child(odd) { border-right: none; }
 
-    /* Stack rows */
-    .stack-row { grid-template-columns: 1fr; gap: 10px; }
+    .scoring-pred-grid { gap: 24px; margin-bottom: 48px; }
 
-    /* Services */
     .service-n { font-size: 52px; }
     .service-title { font-size: 22px; }
 
-    /* About */
     .about-grid { gap: 36px; }
     .photo-block { flex-direction: column; gap: 16px; }
     .career-item { grid-template-columns: 1fr; gap: 6px; }
 
-    /* Contact */
-    .contact-h2 { font-size: clamp(2.5rem, 16vw, 4rem); }
+    .contact-h2 { font-size: clamp(2.5rem, 14vw, 4rem); }
     .contact-links { gap: 10px; }
     .contact-link { padding: 20px 16px; }
     .contact-link-val { font-size: 22px; }
 
-    /* Footer */
     .footer-inner { padding: 20px 16px; }
 
-    /* Prevents any element from busting the viewport width */
-    .hero-head { overflow-wrap: break-word; }
-    .build-h2 { overflow-wrap: break-word; }
-    .services-h2 { overflow-wrap: break-word; }
+    /* Hard stop on overflow-causing elements */
+    .hero-head, .build-h2, .services-h2, .about-h2 { overflow-wrap: break-word; word-break: break-word; }
+    .mock-timing, .mock-api, .ep-table { max-width: 100%; overflow-x: auto; }
+    pre { white-space: pre-wrap; word-break: break-all; }
   }
 </style>
 </head>
@@ -467,7 +468,7 @@
     </div>
 
     <!-- Specs -->
-    <div class="specs-grid" style="grid-template-columns:repeat(4,1fr);">
+    <div class="specs-grid specs-grid-4">
       <div class="spec-cell" style="border-right:2px solid #e5e5e5;background:#fff;">
         <div class="spec-num" style="color:var(--b);">213</div><div class="section-label">Git commits</div>
       </div>
@@ -542,7 +543,7 @@
     </div>
 
     <!-- Scoring + prediction -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:64px;">
+    <div class="scoring-pred-grid">
       <div>
         <div class="section-label">Scoring System</div>
         <div style="margin-top:16px;">
@@ -624,7 +625,7 @@
       </div>
     </div>
 
-    <div class="specs-grid dark" style="grid-template-columns:repeat(6,1fr);">
+    <div class="specs-grid dark specs-grid-6">
       <div class="spec-cell" style="border-right:1px solid #333;background:#0f0f0f;"><div class="spec-num" style="color:var(--y);">16</div><div class="section-label light">Topics</div></div>
       <div class="spec-cell" style="border-right:1px solid #333;background:#111;"><div class="spec-num" style="color:var(--y);">14</div><div class="section-label light">Endpoints</div></div>
       <div class="spec-cell" style="border-right:1px solid #333;background:#0f0f0f;"><div class="spec-num" style="color:var(--y);">3.7Hz</div><div class="section-label light">SSE rate</div></div>

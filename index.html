@@ -306,17 +306,108 @@
 
   @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
+  /* ---- TABLET ---- */
   @media (max-width: 900px) {
+    /* Nav */
     .nav-inner { padding: 0 24px; }
     nav { display: none; }
-    .hero-grid, .about-grid { grid-template-columns: 1fr; }
-    .build-header { grid-template-columns: 80px 1fr; gap: 24px; }
-    .build-body { grid-template-columns: 1fr; }
+    .avail-badge { font-size: 9px; padding: 5px 10px; }
+
+    /* Hero */
+    .hero-inner { padding: 48px 24px 64px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; margin-top: 32px; }
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+
+    /* Builds */
+    .build-header { grid-template-columns: 64px 1fr; gap: 20px; }
+    .build-num { font-size: 80px; }
+    .build-body { grid-template-columns: 1fr; gap: 40px; }
+    .stack-row { grid-template-columns: 1fr; gap: 12px; }
+
+    /* Specs grid — 2 cols on tablet */
+    .specs-grid[style*="repeat(4"] { grid-template-columns: repeat(2, 1fr) !important; }
+
+    /* Services */
+    .services-head { grid-template-columns: 1fr; gap: 24px; }
     .services-grid { grid-template-columns: 1fr; }
     .service-card { border-right: none; border-bottom: 4px solid var(--b); }
+
+    /* About */
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    .career-item { grid-template-columns: 1fr; gap: 8px; }
+
+    /* Contact */
     .contact-links { grid-template-columns: 1fr; }
+
+    /* Shared */
     .section-inner { padding: 64px 24px; }
     .contact-inner { padding: 64px 24px; }
+  }
+
+  /* ---- MOBILE ---- */
+  @media (max-width: 480px) {
+    /* Nav */
+    .nav-inner { padding: 0 16px; height: 56px; }
+    .nav-logo { font-size: 18px; }
+    .avail-badge { display: none; }
+
+    /* Hero */
+    .hero-inner { padding: 36px 16px 52px; }
+    .hero-grid { gap: 32px; margin-top: 24px; }
+    .hero-cta { flex-direction: column; gap: 10px; }
+    .btn-primary, .btn-secondary { text-align: center; padding: 14px 20px; width: 100%; }
+    .hero-stats { grid-template-columns: 1fr 1fr; gap: 2px; }
+    .stat-num { font-size: 38px; }
+
+    /* Sections */
+    .section-inner { padding: 48px 16px; }
+    .contact-inner { padding: 56px 16px; }
+
+    /* Build sections */
+    .build-header { grid-template-columns: 1fr; gap: 16px; }
+    .build-num { font-size: 64px; }
+    .build-sub { font-size: 17px; }
+    .build-links { flex-direction: column; gap: 10px; }
+    .btn-live, .btn-repo { width: 100%; text-align: center; justify-content: center; padding: 14px 20px; }
+
+    /* Specs — full width single col on small mobile */
+    .specs-grid[style*="repeat(4"] { grid-template-columns: 1fr 1fr !important; }
+    .spec-cell { padding: 18px 16px; }
+
+    /* Timing mock — scroll horizontally rather than overflow */
+    .mock-timing { overflow-x: auto; }
+    .timing-row { grid-template-columns: 24px 36px 1fr 60px 70px 20px 36px; gap: 6px; font-size: 10px; }
+
+    /* Mock API */
+    .code-block { font-size: 10px; }
+    .ep-grid { grid-template-columns: 1fr; }
+    .ep-cell:nth-child(odd) { border-right: none; }
+
+    /* Stack rows */
+    .stack-row { grid-template-columns: 1fr; gap: 10px; }
+
+    /* Services */
+    .service-n { font-size: 52px; }
+    .service-title { font-size: 22px; }
+
+    /* About */
+    .about-grid { gap: 36px; }
+    .photo-block { flex-direction: column; gap: 16px; }
+    .career-item { grid-template-columns: 1fr; gap: 6px; }
+
+    /* Contact */
+    .contact-h2 { font-size: clamp(2.5rem, 16vw, 4rem); }
+    .contact-links { gap: 10px; }
+    .contact-link { padding: 20px 16px; }
+    .contact-link-val { font-size: 22px; }
+
+    /* Footer */
+    .footer-inner { padding: 20px 16px; }
+
+    /* Prevents any element from busting the viewport width */
+    .hero-head { overflow-wrap: break-word; }
+    .build-h2 { overflow-wrap: break-word; }
+    .services-h2 { overflow-wrap: break-word; }
   }
 </style>
 </head>
@@ -805,7 +896,7 @@
     </div>
     <p class="contact-sub">Solo execution. AI-assisted where it helps. If you need someone who can scope, build, and ship without four meetings before the first commit — let's talk.</p>
     <div class="contact-links">
-      <a href="mailto:harsh779@gmail.com" class="contact-link">
+      <a href="/cdn-cgi/l/email-protection#1c747d6e6f742b2b255c7b717d7570327f7371" class="contact-link">
         <div>
           <div class="contact-link-label">Email</div>
           <div class="contact-link-val">Direct Line</div>
@@ -838,7 +929,7 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Scroll shadow
   window.addEventListener('scroll', () => {
     document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 10);
@@ -851,11 +942,4 @@
       c.classList.remove('active');
       c.querySelector('.service-toggle').textContent = '+';
     });
-    if (!isActive) {
-      el.classList.add('active');
-      el.querySelector('.service-toggle').textContent = '−';
-    }
-  }
-</script>
-</body>
-</html>
+    i

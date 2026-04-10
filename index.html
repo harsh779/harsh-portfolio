@@ -1384,7 +1384,7 @@
     </div>
 
     <div class="contact-links">
-      <a href="mailto:hello@harsh.work" class="contact-link" id="sendBriefLink">
+      <a href="mailto:harsh779@gmail.com" class="contact-link" id="sendBriefLink" data-subject="Freelance analytics / automation project">
         <div>
           <div class="contact-link-label">Email</div>
           <div class="contact-link-val">Send Brief</div>
@@ -1507,34 +1507,47 @@
   })();
 
 
-  // Send brief (prefill mailto with the brief template)
+  // Send brief (prefill email with the brief template)
   (function initSendBrief(){
     const link = document.getElementById('sendBriefLink');
     if (!link) return;
 
     const briefEl = document.getElementById('briefText');
 
+    function getEmail(){
+      const href = link.getAttribute('href') || '';
+      const match = href.match(/^mailto:([^?]+)/i);
+      if (match && match[1]) return match[1].trim();
+      return '';
+    }
+
     link.addEventListener('click', (e) => {
+      const email = getEmail();
+      if (!email) return;
+
       e.preventDefault();
 
-      // Update this email if you change your contact address:
-      const email = 'harsh779@gmail.com';
-      const subject = 'Freelance analytics / automation project';
+      const subject = link.getAttribute('data-subject') || 'Freelance analytics / automation project';
       const brief = (briefEl && briefEl.textContent) ? briefEl.textContent.trim() : '';
 
-      const body =
-`Hi Harsh,
+      const body = `Hi Harsh,
 
 ${brief}
 
 Thanks,
 `;
 
-      const mailto = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailto;
+      // 1) Try Gmail compose (works even when mailto handler isn't configured)
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const opened = window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+
+      // 2) Fallback to mailto if popups are blocked
+      if (!opened) {
+        const mailto = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailto;
+      }
     });
   })();
-
 </script>
 
 </body>

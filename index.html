@@ -656,6 +656,57 @@
     .contact-links { margin-top: 22px; }
   }
 
+
+  /* ---- FEATURED PROOF TOGGLES ---- */
+  .build-details {
+    margin-top: 24px;
+  }
+
+  .see-more-summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    background: var(--y);
+    color: var(--b);
+    border: 2px solid var(--b);
+    padding: 12px 18px;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    list-style: none;
+    margin-bottom: 24px;
+  }
+
+  .build-details .see-more-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .build-details[open] .see-more-summary {
+    background: #fff;
+  }
+
+  .build-details[open] .see-more-summary::after {
+    content: "Hide";
+    margin-left: 6px;
+    font-weight: 700;
+  }
+
+  .build-details:not([open]) .see-more-summary::after {
+    content: "See More";
+    margin-left: 6px;
+    font-weight: 700;
+  }
+
+  @media (max-width: 480px) {
+    .see-more-summary {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
 </style>
 </head>
 
@@ -841,7 +892,10 @@
       </div>
     </div>
 
-    <div class="specs-grid" style="grid-template-columns:repeat(4,1fr);">
+    
+    <details class="build-details">
+      <summary class="see-more-summary"></summary>
+<div class="specs-grid" style="grid-template-columns:repeat(4,1fr);">
       <div class="spec-cell" style="border-right:2px solid #e5e5e5;background:#fff;">
         <div class="spec-num" style="color:var(--b);">213</div><div class="section-label">Git commits</div>
       </div>
@@ -980,6 +1034,8 @@
       <a href="https://f1-predictor-league.onrender.com" target="_blank" rel="noreferrer" class="btn-live"><span class="live-dot"></span> Open Live App →</a>
       <a href="https://github.com/harsh779/f1-predictor-league" target="_blank" rel="noreferrer" class="btn-repo">GitHub Repo</a>
     </div>
+    </details>
+
   </div>
 </section>
 
@@ -996,7 +1052,10 @@
       </div>
     </div>
 
-    <div class="specs-grid dark api-specs-grid">
+    
+    <details class="build-details">
+      <summary class="see-more-summary"></summary>
+<div class="specs-grid dark api-specs-grid">
       <div class="spec-cell" style="border-right:1px solid #333;background:#0f0f0f;"><div class="spec-num" style="color:var(--y);">16</div><div class="section-label light">Topics</div></div>
       <div class="spec-cell" style="border-right:1px solid #333;background:#111;"><div class="spec-num" style="color:var(--y);">14</div><div class="section-label light">Endpoints</div></div>
       <div class="spec-cell" style="border-right:1px solid #333;background:#0f0f0f;"><div class="spec-num" style="color:var(--y);">3.7Hz</div><div class="section-label light">SSE rate</div></div>
@@ -1084,6 +1143,8 @@
       <a href="https://f1-live-api.onrender.com" target="_blank" rel="noreferrer" class="btn-live"><span class="live-dot"></span> Open Live API →</a>
       <a href="https://github.com/harsh779/f1-live-api" target="_blank" rel="noreferrer" class="btn-repo dark">GitHub Repo</a>
     </div>
+    </details>
+
   </div>
 </section>
 

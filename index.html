@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Harsh — Strategy · Insights · Analytics · Builder</title>
+<title>Harsh — Freelance Analytics & AI Automation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@300..500&display=swap" rel="stylesheet">
 <style>
@@ -286,7 +286,7 @@
   .avail-strip { margin-top: 40px; display: inline-flex; align-items: center; gap: 10px; border: 2px solid var(--y); padding: 10px 18px; }
   .avail-strip-text { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: var(--y); }
   .contact-sub { font-size: 18px; line-height: 1.75; color: #a3a3a3; max-width: 600px; margin-top: 32px; }
-  .contact-links { margin-top: 48px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .contact-links { margin-top: 48px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
   .contact-link {
     border: 3px solid #fff; color: #fff; padding: 28px 24px;
     text-decoration: none; display: flex; justify-content: space-between; align-items: center;
@@ -792,6 +792,27 @@
     }
   }
 
+
+  /* ---- CONTACT BRIEF BOX ---- */
+  .brief-wrap { margin-top: 24px; border: 2px solid var(--y); background: #0f0f0f; }
+  .brief-head { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; border-bottom: 1px solid #222; }
+  .brief-title { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.18em; color: var(--y); }
+  .brief-copy {
+    background: var(--y); color: var(--b);
+    border: 2px solid var(--y);
+    padding: 6px 10px;
+    font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.12em;
+    cursor: pointer;
+  }
+  .brief-box { margin: 0; padding: 14px; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.7; color: #d4d4d4; white-space: pre-wrap; }
+  .brief-note { padding: 10px 14px 12px; font-size: 12px; color: #a3a3a3; border-top: 1px solid #222; }
+
+  @media (max-width: 480px) {
+    .brief-head { gap: 10px; }
+    .brief-copy { padding: 6px 10px; }
+    .brief-box { font-size: 10px; }
+  }
+
 </style>
 </head>
 
@@ -803,28 +824,29 @@
     <nav>
       <a href="#about">About</a>
       <a href="#strengths">What I Bring</a>
+      <a href="#services">Services</a>
       <a href="#builds">Selected Work</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div class="avail-badge"><span class="dot"></span> Available</div>
+    <div class="avail-badge"><span class="dot"></span> Open for freelance</div>
   </div>
 </header>
 
 <section id="top">
   <div class="hero-inner">
-    <div class="intro-kicker"><span class="dot"></span> PoS · Retail · CPG/FMCG · Analytics · Systems</div>
+    <div class="intro-kicker"><span class="dot"></span> Freelance analytics · AI automation · Dashboards · Systems</div>
     <h1 class="hero-head">I TURN<br>BUSINESS<br>PROBLEMS <span class="hl">INTO SYSTEMS</span>.</h1>
     <div class="hero-grid">
       <div>
         <p class="hero-copy-main">
-          Versatile analytics and strategy leader with 10+ years across PoS, retailer, CPG/FMCG, CRM, syndicated, planning, research, digital, and real-time data environments — who also builds real systems.
+          Freelance analytics + AI automation partner with 10+ years across PoS, retail, and FMCG / CPG data environments — and the ability to build real systems.
         </p>
         <p class="hero-copy-sub">
-          My strength is not one channel or one dataset. It is <strong>working across data ecosystems</strong> — finding the signal, designing the logic, and turning it into something operational: a model, dashboard, workflow, API, or product people can actually use. The two F1 builds below are proof of that capability — not the whole story.
+          If your team is drowning in data and manual reporting, I turn it into a decision system: <strong>clean KPI logic</strong>, <strong>dashboards people trust</strong>, and <strong>automations that run weekly</strong>. The two F1 builds below are proof I can design logic and ship end‑to‑end — not the only thing I do.
         </p>
         <div class="hero-cta">
-          <a href="#builds" class="btn-primary">See Featured Proof →</a>
-          <a href="#about" class="btn-secondary">About Me</a>
+          <a href="#services" class="btn-primary">Start a Project →</a>
+          <a href="#builds" class="btn-secondary">See Featured Proof →</a>
         </div>
       </div>
       <div class="hero-stats">
@@ -855,21 +877,84 @@
       </div>
       <div class="strength-card">
         <div class="strength-n">02</div>
-        <div class="strength-title">Analytics & BI</div>
-        <p class="strength-text">I design KPI logic, reporting systems, dashboards, and measurement approaches that teams can trust and run.</p>
-        <div class="strength-proof">Power BI, KPI architecture, decision dashboards, automated reporting, signal interpretation.</div>
+        <div class="strength-title">PoS & Retail Analytics</div>
+        <p class="strength-text">I diagnose retail performance, pricing/promo impact, distribution, and mix — then translate it into clear actions.</p>
+        <div class="strength-proof">Retail KPIs, promo effectiveness, pricing analytics, assortment/mix, store/channel reporting.</div>
       </div>
       <div class="strength-card">
         <div class="strength-n">03</div>
-        <div class="strength-title">AI-Enabled Execution</div>
-        <p class="strength-text">I use AI where it improves speed and scale, but keep the judgment, QA, structure, and business context human-led.</p>
-        <div class="strength-proof">Workflow design, prompt systems, faster research ops, lean product execution.</div>
+        <div class="strength-title">Dashboards & Automation</div>
+        <p class="strength-text">I automate reporting and recurring analysis so teams stop doing manual work and start acting faster.</p>
+        <div class="strength-proof">Power BI builds, automated refresh/reporting, QA checks, alerting, repeatable analysis workflows.</div>
       </div>
       <div class="strength-card">
         <div class="strength-n">04</div>
         <div class="strength-title">Build Capability</div>
         <p class="strength-text">When needed, I can go beyond planning and actually build the API, tool, prototype, or product that closes the loop.</p>
         <div class="strength-proof">APIs, real-time systems, product logic, end-to-end ownership, production thinking.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="services">
+  <div class="section-inner">
+    <div class="section-label">Services</div>
+    <div class="services-head">
+      <h2 class="services-h2">Ways To<br><span class="hl">Work</span><br>Together.</h2>
+      <p class="build-sub" style="margin-top:0;max-width:620px;">
+        Clear engagements, clear outcomes. Fixed scope for speed — and outputs you can run after I’m gone.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card active">
+        <div class="service-n">01</div>
+        <div class="service-title">Analytics Diagnostic</div>
+        <p class="service-scope">7–10 days to fix KPI logic, identify the real levers, and produce a decision-ready plan.</p>
+        <div class="service-footer">
+          <span class="service-time">7–10 days</span>
+          <span class="service-toggle">–</span>
+        </div>
+        <div class="service-detail">
+          <div class="service-detail-label">You get</div>
+          <p>Data + KPI audit, priority opportunity list (3–5 items), and an execution plan with owners and metrics.</p>
+          <p class="muted">Best when: reporting exists but decisions are stuck or no one trusts the numbers.</p>
+          <a href="#contact" class="service-detail-cta">Start with a diagnostic →</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-n">02</div>
+        <div class="service-title">Build Sprint</div>
+        <p class="service-scope">2–4 weeks to ship a dashboard, KPI system, or a working analytics workflow (end-to-end).</p>
+        <div class="service-footer">
+          <span class="service-time">2–4 weeks</span>
+          <span class="service-toggle">+</span>
+        </div>
+        <div class="service-detail">
+          <div class="service-detail-label">You get</div>
+          <p>A working build: dashboard + data model, automated refresh, documentation, and handover.</p>
+          <p class="muted">Best when: you need a real output fast — not a long roadmap.</p>
+          <a href="#contact" class="service-detail-cta">Book a build sprint →</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-n">03</div>
+        <div class="service-title">Automation Retainer</div>
+        <p class="service-scope">Ongoing analytics ops: automate recurring reporting, build small tools, keep systems clean.</p>
+        <div class="service-footer">
+          <span class="service-time">Monthly</span>
+          <span class="service-toggle">+</span>
+        </div>
+        <div class="service-detail">
+          <div class="service-detail-label">You get</div>
+          <p>Monthly capacity for fixes, enhancements, and automations: reporting pipelines, QA checks, alerts, and ad‑hoc analysis.</p>
+          <p class="muted">Best when: you want one owner who keeps the system running and improving.</p>
+          <a href="#contact" class="service-detail-cta">Discuss a retainer →</a>
+        </div>
       </div>
     </div>
   </div>
@@ -1267,35 +1352,64 @@
 <section id="contact">
   <div class="contact-inner">
     <div class="section-label yellow">Contact</div>
-    <h2 class="contact-h2">Need Someone Who Can<br><span class="hl">Think and Build</span>?</h2>
+    <h2 class="contact-h2">Ready To<br><span class="hl">Automate</span><br>Your Analytics?</h2>
+
     <div class="contact-role-tags">
-      <span class="contact-role-tag">Strategy</span>
-      <span class="contact-role-tag">Insights</span>
-      <span class="contact-role-tag">Analytics</span>
-      <span class="contact-role-tag">BI</span>
-      <span class="contact-role-tag">AI-Enabled Workflows</span>
-      <span class="contact-role-tag">Product / API Builds</span>
+      <span class="contact-role-tag">PoS / Retail</span>
+      <span class="contact-role-tag">FMCG / CPG</span>
+      <span class="contact-role-tag">Dashboards</span>
+      <span class="contact-role-tag">Pricing / Promo</span>
+      <span class="contact-role-tag">AI Automation</span>
+      <span class="contact-role-tag">APIs / Systems</span>
     </div>
-    <p class="contact-sub">I am most valuable in roles and projects where business judgment and execution both matter — strategy, insights, analytics leadership, BI, AI-enabled delivery, and selective product or API builds.</p>
+
+    <p class="contact-sub">
+      Fast, fixed-scope freelance work: <strong>Analytics Diagnostic (7–10 days)</strong>, <strong>Build Sprint (2–4 weeks)</strong>, or an <strong>Automation Retainer</strong>.
+      If you share the brief below, I can respond with a clear plan and timeline.
+    </p>
+
+    <div class="brief-wrap">
+      <div class="brief-head">
+        <div class="brief-title">Copy‑paste brief</div>
+        <button type="button" class="brief-copy" data-copy="#briefText">Copy</button>
+      </div>
+      <pre id="briefText" class="brief-box">1) Company / category:
+2) What decision are you trying to make:
+3) Data available (PoS / retailer portal / CRM / etc):
+4) Current pain (manual reporting, low trust KPIs, delays, etc):
+5) Output you want (dashboard, model, automation, API, etc):
+6) Timeline + key stakeholders:
+7) Access constraints (tools, permissions, data sharing):</pre>
+      <div class="brief-note">Typical response time: within 24–48 hours with next steps.</div>
+    </div>
+
     <div class="contact-links">
-      <a href="/cdn-cgi/l/email-protection#1c747d6e6f742b2b255c7b717d7570327f7371" class="contact-link">
+      <a href="mailto:hello@harsh.work" class="contact-link" id="sendBriefLink">
         <div>
           <div class="contact-link-label">Email</div>
-          <div class="contact-link-val">Reach Out</div>
+          <div class="contact-link-val">Send Brief</div>
+        </div>
+        <span class="contact-link-arrow">↗</span>
+      </a>
+
+      <a href="https://calendly.com/harsh779/30min" target="_blank" rel="noreferrer" class="contact-link">
+        <div>
+          <div class="contact-link-label">Calendly</div>
+          <div class="contact-link-val">Book Call</div>
         </div>
         <span class="contact-link-arrow">↗</span>
       </a>
       <a href="https://www.linkedin.com/in/harshk779/" target="_blank" rel="noreferrer" class="contact-link">
         <div>
           <div class="contact-link-label">LinkedIn</div>
-          <div class="contact-link-val">View Profile</div>
+          <div class="contact-link-val">Message</div>
         </div>
         <span class="contact-link-arrow">↗</span>
       </a>
       <a href="https://github.com/harsh779/" target="_blank" rel="noreferrer" class="contact-link">
         <div>
           <div class="contact-link-label">GitHub</div>
-          <div class="contact-link-val">See The Code</div>
+          <div class="contact-link-val">Proof</div>
         </div>
         <span class="contact-link-arrow">↗</span>
       </a>
@@ -1306,7 +1420,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">HARSH<span>/</span></div>
-    <div class="footer-note">Strategy · Analytics · Build</div>
+    <div class="footer-note">Freelance Analytics · AI Automation · Systems</div>
   </div>
 </footer>
 
@@ -1339,6 +1453,88 @@
   }
   window.addEventListener('load', applyViewportFixes);
   window.addEventListener('resize', applyViewportFixes);
+</script>
+
+
+<script>
+  // Services accordion (click a card to expand)
+  (function initServices(){
+    const cards = Array.from(document.querySelectorAll('.service-card'));
+    if (!cards.length) return;
+
+    function setActive(activeCard) {
+      cards.forEach((c) => {
+        c.classList.toggle('active', c === activeCard);
+        const t = c.querySelector('.service-toggle');
+        if (t) t.textContent = (c === activeCard) ? '–' : '+';
+      });
+    }
+
+    const firstActive = cards.find(c => c.classList.contains('active')) || cards[0];
+    setActive(firstActive);
+
+    cards.forEach((card) => {
+      card.addEventListener('click', () => setActive(card));
+    });
+  })();
+
+  // Copy brief
+  (function initCopy(){
+    const btn = document.querySelector('.brief-copy');
+    if (!btn) return;
+    btn.addEventListener('click', async () => {
+      const sel = btn.getAttribute('data-copy');
+      const el = sel ? document.querySelector(sel) : null;
+      const text = el ? el.textContent : '';
+      try {
+        await navigator.clipboard.writeText(text || '');
+        btn.textContent = 'Copied';
+        setTimeout(() => (btn.textContent = 'Copy'), 1200);
+      } catch (e) {
+        // fallback: select text (or show prompt)
+        if (!el) return;
+        const selection = window.getSelection && window.getSelection();
+        if (!selection) {
+          window.prompt('Copy the brief:', text || '');
+          return;
+        }
+        const range = document.createRange();
+        range.selectNodeContents(el);
+        selection.removeAllRanges();
+        selection.addRange(range);
+      }
+    });
+  })();
+
+
+  // Send brief (prefill mailto with the brief template)
+  (function initSendBrief(){
+    const link = document.getElementById('sendBriefLink');
+    if (!link) return;
+
+    const briefEl = document.getElementById('briefText');
+
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      // Update this email if you change your contact address:
+      const email = 'harsh779@gmail.com';
+      const subject = 'Freelance analytics / automation project';
+      const brief = (briefEl && briefEl.textContent) ? briefEl.textContent.trim() : '';
+
+      const body =
+`Hi Harsh,
+
+${brief}
+
+Thanks,
+`;
+
+      const mailto = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+    });
+  })();
+
 </script>
 
 </body>

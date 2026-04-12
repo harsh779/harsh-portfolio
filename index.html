@@ -101,7 +101,6 @@
   #api { background: var(--b); border-bottom: 4px solid var(--y); }
 
   .build-header { display: grid; grid-template-columns: 120px 1fr; gap: 48px; align-items: end; margin-bottom: 64px; }
-  .build-num { font-family: 'Anton', sans-serif; font-size: 120px; line-height: 0.8; }
   .build-tag {
     display: inline-flex; align-items: center; gap: 8px;
     border: 2px solid var(--b); padding: 6px 14px; margin-bottom: 16px;
@@ -309,108 +308,67 @@
 
   /* ---- TABLET ---- */
   @media (max-width: 900px) {
-    /* Nav */
     .nav-inner { padding: 0 24px; }
     nav { display: none; }
     .avail-badge { font-size: 9px; padding: 5px 10px; }
-
-    /* Hero */
     .hero-inner { padding: 48px 24px 64px; }
     .hero-grid { grid-template-columns: 1fr; gap: 40px; margin-top: 32px; }
     .hero-stats { grid-template-columns: 1fr 1fr; }
-
-    /* Builds */
     .build-header { grid-template-columns: 64px 1fr; gap: 20px; }
     .build-num { font-size: 80px; }
     .build-body { grid-template-columns: 1fr; gap: 40px; }
     .stack-row { grid-template-columns: 1fr; gap: 12px; }
-
-    /* Specs grid — 2 cols on tablet */
     .specs-grid[style*="repeat(4"] { grid-template-columns: repeat(2, 1fr) !important; }
-
-    /* Services */
     .services-head { grid-template-columns: 1fr; gap: 24px; }
     .services-grid { grid-template-columns: 1fr; }
     .service-card { border-right: none; border-bottom: 4px solid var(--b); }
-
-    /* About */
     .about-grid { grid-template-columns: 1fr; gap: 48px; }
     .career-item { grid-template-columns: 1fr; gap: 8px; }
-
-    /* Contact */
     .contact-links { grid-template-columns: 1fr; }
-
-    /* Shared */
     .section-inner { padding: 64px 24px; }
     .contact-inner { padding: 64px 24px; }
   }
 
   /* ---- MOBILE ---- */
   @media (max-width: 480px) {
-    /* Nav */
     .nav-inner { padding: 0 16px; height: 56px; }
     .nav-logo { font-size: 18px; }
     .avail-badge { display: none; }
-
-    /* Hero */
     .hero-inner { padding: 36px 16px 52px; }
     .hero-grid { gap: 32px; margin-top: 24px; }
     .hero-cta { flex-direction: column; gap: 10px; }
     .btn-primary, .btn-secondary { text-align: center; padding: 14px 20px; width: 100%; }
     .hero-stats { grid-template-columns: 1fr 1fr; gap: 2px; }
     .stat-num { font-size: 38px; }
-
-    /* Sections */
     .section-inner { padding: 48px 16px; }
     .contact-inner { padding: 56px 16px; }
-
-    /* Build sections */
     .build-header { grid-template-columns: 1fr; gap: 16px; }
     .build-num { font-size: 64px; }
     .build-sub { font-size: 17px; }
     .build-links { flex-direction: column; gap: 10px; }
     .btn-live, .btn-repo { width: 100%; text-align: center; justify-content: center; padding: 14px 20px; }
-
-    /* Specs — full width single col on small mobile */
     .specs-grid[style*="repeat(4"] { grid-template-columns: 1fr 1fr !important; }
     .spec-cell { padding: 18px 16px; }
-
-    /* Timing mock — scroll horizontally rather than overflow */
     .mock-timing { overflow-x: auto; }
     .timing-row { grid-template-columns: 24px 36px 1fr 60px 70px 20px 36px; gap: 6px; font-size: 10px; }
-
-    /* Mock API */
     .code-block { font-size: 10px; }
     .ep-grid { grid-template-columns: 1fr; }
     .ep-cell:nth-child(odd) { border-right: none; }
-
-    /* Stack rows */
     .stack-row { grid-template-columns: 1fr; gap: 10px; }
-
-    /* Services */
     .service-n { font-size: 52px; }
     .service-title { font-size: 22px; }
-
-    /* About */
     .about-grid { gap: 36px; }
     .photo-block { flex-direction: column; gap: 16px; }
     .career-item { grid-template-columns: 1fr; gap: 6px; }
-
-    /* Contact */
     .contact-h2 { font-size: clamp(2.5rem, 16vw, 4rem); }
     .contact-links { gap: 10px; }
     .contact-link { padding: 20px 16px; }
     .contact-link-val { font-size: 22px; }
-
-    /* Footer */
     .footer-inner { padding: 20px 16px; }
-
-    /* Prevents any element from busting the viewport width */
     .hero-head { overflow-wrap: break-word; }
     .build-h2 { overflow-wrap: break-word; }
     .services-h2 { overflow-wrap: break-word; }
   }
-
 
   /* ---- POSITIONING REFRESH ---- */
   .intro-kicker {
@@ -508,8 +466,6 @@
     .hero-copy-sub { font-size: 15px; }
   }
 
-
-  /* ---- MOBILE FIXES ---- */
   body { overflow-x: hidden; }
   img { max-width: 100%; }
 
@@ -541,8 +497,6 @@
     .contact-inner { overflow-x: hidden; }
   }
 
-
-  /* ---- MOBILE FIXES V4 ---- */
   html, body {
     overflow-x: hidden;
     max-width: 100vw;
@@ -585,11 +539,9 @@
       grid-template-columns: 1fr !important;
       gap: 20px !important;
     }
-
     .api-specs-grid {
       grid-template-columns: repeat(2, 1fr) !important;
     }
-
     .proof-split-grid,
     .api-specs-grid,
     .specs-grid,
@@ -607,7 +559,6 @@
       max-width: 100% !important;
       min-width: 0 !important;
     }
-
     .expertise-row .exp-pill,
     .proof-tag,
     .contact-role-tag,
@@ -620,8 +571,6 @@
     }
   }
 
-
-  /* ---- REMOVE HEADER LOGO ONLY ---- */
   .nav-logo { display: none !important; }
   .nav-inner { justify-content: flex-end; }
 
@@ -629,8 +578,6 @@
     #site-header { display: none !important; }
   }
 
-
-  /* ---- SPACING REFINEMENTS ---- */
   .nav-inner { justify-content: flex-end; gap: 18px; }
   .avail-badge {
     padding: 5px 10px;
@@ -656,153 +603,77 @@
     .contact-links { margin-top: 22px; }
   }
 
-
   /* ---- FEATURED PROOF TOGGLES ---- */
-  .build-details {
-    margin-top: 24px;
-  }
-
+  .build-details { margin-top: 24px; }
   .see-more-summary {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    background: var(--y);
-    color: var(--b);
-    border: 2px solid var(--b);
-    padding: 12px 18px;
-    font-size: 12px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    list-style: none;
-    margin-bottom: 24px;
+    display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+    background: var(--y); color: var(--b); border: 2px solid var(--b);
+    padding: 12px 18px; font-size: 12px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.1em; list-style: none; margin-bottom: 24px;
   }
-
-  .build-details .see-more-summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .build-details[open] .see-more-summary {
-    background: #fff;
-  }
-
-  .build-details[open] .see-more-summary::after {
-    content: "Hide";
-    margin-left: 6px;
-    font-weight: 700;
-  }
-
-  .build-details:not([open]) .see-more-summary::after {
-    content: "See More";
-    margin-left: 6px;
-    font-weight: 700;
-  }
+  .build-details .see-more-summary::-webkit-details-marker { display: none; }
+  .build-details[open] .see-more-summary { background: #fff; }
+  .build-details[open] .see-more-summary::after { content: "Hide"; margin-left: 6px; font-weight: 700; }
+  .build-details:not([open]) .see-more-summary::after { content: "See More"; margin-left: 6px; font-weight: 700; }
 
   @media (max-width: 480px) {
-    .see-more-summary {
-      width: 100%;
-      justify-content: center;
-      text-align: center;
-    }
+    .see-more-summary { width: 100%; justify-content: center; text-align: center; }
   }
 
-
-  /* ---- STACK ABOUT SECTION + TIGHTEN SEE MORE ---- */
-  #about .about-grid {
-    grid-template-columns: 1fr !important;
-    gap: 40px !important;
-  }
-
-  #about .proof-tag-row {
-    margin-top: 14px;
-  }
-
-  #about .summary-grid {
-    margin-top: 20px;
-  }
-
-  #about .about-snapshot {
-    margin-top: 20px;
-  }
+  #about .about-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  #about .proof-tag-row { margin-top: 14px; }
+  #about .summary-grid { margin-top: 20px; }
+  #about .about-snapshot { margin-top: 20px; }
 
   #builds .section-inner,
-  #api .section-inner {
-    padding-bottom: 48px;
-  }
+  #api .section-inner,
+  #yt-intelligence .section-inner { padding-bottom: 48px; }
 
-  .build-details {
-    margin-top: 16px;
-  }
-
-  .see-more-summary {
-    margin-bottom: 12px;
-  }
-
-  .build-details:not([open]) {
-    margin-bottom: 0;
-  }
+  .build-details { margin-top: 16px; }
+  .see-more-summary { margin-bottom: 12px; }
+  .build-details:not([open]) { margin-bottom: 0; }
 
   @media (max-width: 480px) {
-    #about .about-grid {
-      gap: 28px !important;
-    }
-
+    #about .about-grid { gap: 28px !important; }
     #builds .section-inner,
-    #api .section-inner {
-      padding-bottom: 36px;
-    }
+    #api .section-inner,
+    #yt-intelligence .section-inner { padding-bottom: 36px; }
   }
 
-
-  /* ---- FEATURED PROOF SPACING FIX ---- */
   #builds .build-header,
-  #api .build-header {
-    margin-bottom: 20px !important;
-  }
+  #api .build-header,
+  #yt-intelligence .build-header { margin-bottom: 20px !important; }
 
   #builds .build-details,
-  #api .build-details {
-    margin-top: 0 !important;
-  }
+  #api .build-details,
+  #yt-intelligence .build-details { margin-top: 0 !important; }
 
   #builds .see-more-summary,
-  #api .see-more-summary {
-    margin-left: 168px;
-    margin-bottom: 0;
-  }
+  #api .see-more-summary,
+  #yt-intelligence .see-more-summary { margin-left: 168px; margin-bottom: 0; }
 
   @media (max-width: 900px) {
     #builds .see-more-summary,
-    #api .see-more-summary {
-      margin-left: 0;
-    }
+    #api .see-more-summary,
+    #yt-intelligence .see-more-summary { margin-left: 0; }
   }
 
   @media (max-width: 480px) {
     #builds .build-header,
-    #api .build-header {
-      margin-bottom: 14px !important;
-    }
-
+    #api .build-header,
+    #yt-intelligence .build-header { margin-bottom: 14px !important; }
     #builds .see-more-summary,
-    #api .see-more-summary {
-      margin-left: 0;
-      width: 100%;
-    }
+    #api .see-more-summary,
+    #yt-intelligence .see-more-summary { margin-left: 0; width: 100%; }
   }
-
 
   /* ---- CONTACT BRIEF BOX ---- */
   .brief-wrap { margin-top: 24px; border: 2px solid var(--y); background: #0f0f0f; }
   .brief-head { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; border-bottom: 1px solid #222; }
   .brief-title { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.18em; color: var(--y); }
   .brief-copy {
-    background: var(--y); color: var(--b);
-    border: 2px solid var(--y);
-    padding: 6px 10px;
-    font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.12em;
-    cursor: pointer;
+    background: var(--y); color: var(--b); border: 2px solid var(--y);
+    padding: 6px 10px; font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.12em; cursor: pointer;
   }
   .brief-box { margin: 0; padding: 14px; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.7; color: #d4d4d4; white-space: pre-wrap; }
   .brief-note { padding: 10px 14px 12px; font-size: 12px; color: #a3a3a3; border-top: 1px solid #222; }
@@ -812,6 +683,26 @@
     .brief-copy { padding: 6px 10px; }
     .brief-box { font-size: 10px; }
   }
+
+  /* ---- YT INTELLIGENCE MOCK ---- */
+  .mock-report { border: 3px solid var(--b); background: #fff; box-shadow: 8px 8px 0 var(--y); }
+  .report-bar { border-bottom: 2px solid var(--b); padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; background: var(--b); }
+  .report-bar-left { display: flex; align-items: center; gap: 8px; }
+  .signal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+  .signal-card { background: #fafaf7; border: 1px solid #e5e5e5; padding: 10px 12px; }
+  .signal-label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #737373; margin-bottom: 4px; }
+  .signal-val { font-family: 'Anton', sans-serif; font-size: 20px; line-height: 0.9; }
+  .signal-note { font-size: 10px; color: #525252; margin-top: 4px; }
+  .aspect-heading { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #525252; margin-bottom: 8px; }
+  .aspect-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid #f0f0f0; }
+  .aspect-row:last-of-type { border-bottom: none; }
+  .aspect-name { font-size: 12px; color: #0a0a0a; }
+  .badge-pos { background: #dcfce7; color: #15803d; font-size: 10px; font-weight: 700; padding: 2px 8px; letter-spacing: 0.04em; }
+  .badge-mix { background: #fef9c3; color: #854d0e; font-size: 10px; font-weight: 700; padding: 2px 8px; letter-spacing: 0.04em; }
+  .badge-neg { background: #fee2e2; color: #991b1b; font-size: 10px; font-weight: 700; padding: 2px 8px; letter-spacing: 0.04em; }
+  .comment-highlight { margin-top: 10px; border-left: 4px solid var(--y); background: #fffef0; padding: 10px 12px; }
+  .comment-highlight-label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #525252; margin-bottom: 4px; }
+  .comment-highlight-text { font-size: 12px; color: #0a0a0a; line-height: 1.5; }
 
 </style>
 </head>
@@ -842,7 +733,7 @@
           Freelance analytics + AI automation partner with 10+ years across PoS, retail, and FMCG / CPG data environments — and the ability to build real systems.
         </p>
         <p class="hero-copy-sub">
-          If your team is drowning in data and manual reporting, I turn it into a decision system: <strong>clean KPI logic</strong>, <strong>dashboards people trust</strong>, and <strong>automations that run weekly</strong>. The two F1 builds below are proof I can design logic and ship end‑to‑end — not the only thing I do.
+          If your team is drowning in data and manual reporting, I turn it into a decision system: <strong>clean KPI logic</strong>, <strong>dashboards people trust</strong>, and <strong>automations that run weekly</strong>. The builds below span real-time sports systems and a production consumer intelligence tool — proof I can design logic and ship end‑to‑end across very different problem spaces — and not the only thing I do.
         </p>
         <div class="hero-cta">
           <a href="#services" class="btn-primary">Start a Project →</a>
@@ -851,7 +742,7 @@
       </div>
       <div class="hero-stats">
         <div class="stat-card"><div class="stat-num">10+</div><div class="stat-label">Years in strategy & analytics</div></div>
-        <div class="stat-card"><div class="stat-num">2</div><div class="stat-label">Live products built solo</div></div>
+        <div class="stat-card"><div class="stat-num">3</div><div class="stat-label">Live products built solo</div></div>
         <div class="stat-card"><div class="stat-num">0→1</div><div class="stat-label">Insights practice built</div></div>
         <div class="stat-card"><div class="stat-num">$350K+</div><div class="stat-label">Commercial value in 9 months</div></div>
       </div>
@@ -904,7 +795,7 @@
     <div class="services-head">
       <h2 class="services-h2">Ways To<br><span class="hl">Work</span><br>Together.</h2>
       <p class="build-sub" style="margin-top:0;max-width:620px;">
-        Clear engagements, clear outcomes. Fixed scope for speed — and outputs you can run after I’m gone.
+        Clear engagements, clear outcomes. Fixed scope for speed — and outputs you can run after I'm gone.
       </p>
     </div>
 
@@ -960,6 +851,9 @@
   </div>
 </section>
 
+<!-- ======================================================== -->
+<!-- BUILD 01: F1 PREDICTOR LEAGUE                            -->
+<!-- ======================================================== -->
 <section id="builds" style="background:#fff;border-bottom:4px solid var(--b);">
   <div class="section-inner">
     <div class="section-label">Featured Proof</div>
@@ -974,153 +868,155 @@
       </div>
     </div>
 
-    
     <details class="build-details">
       <summary class="see-more-summary"></summary>
-<div class="specs-grid" style="grid-template-columns:repeat(4,1fr);">
-      <div class="spec-cell" style="border-right:2px solid #e5e5e5;background:#fff;">
-        <div class="spec-num" style="color:var(--b);">213</div><div class="section-label">Git commits</div>
-      </div>
-      <div class="spec-cell" style="border-right:2px solid #e5e5e5;background:#fafaf7;">
-        <div class="spec-num" style="color:var(--b);">24</div><div class="section-label">Race weekends live</div>
-      </div>
-      <div class="spec-cell" style="border-right:2px solid #e5e5e5;background:#fff;">
-        <div class="spec-num" style="color:var(--b);">22</div><div class="section-label">Drivers tracked live</div>
-      </div>
-      <div class="spec-cell" style="background:#fafaf7;">
-        <div class="spec-num" style="color:var(--b);">2</div><div class="section-label">Production hosts</div>
-      </div>
-    </div>
-
-    <div class="build-body">
-      <div class="build-story">
-        <div class="section-label">What I Solved</div>
-        <p>I did not just build a prediction form. I designed the system around it: submission lock rules, fairness logic for edge cases, scoring mechanics, no-show penalties, live data connections, and production reliability across race weekends.</p>
-        <p>The experience is powered by my own F1 API via SSE, which means the frontend was designed around real-time timing, telemetry, tyre data, pit events, team radio, and race-control context instead of static results pages.</p>
-        <p>This is the kind of work that sits between product judgment, backend thinking, data architecture, and user experience. That mix is exactly what I want this portfolio to prove.</p>
-      </div>
-      <div style="position:sticky;top:80px;">
-        <div class="mock-timing">
-          <div class="mock-bar">
-            <div class="mock-bar-left">
-              <span class="live-red"></span>
-              <span class="mock-label">Live Timing · Race</span>
-            </div>
-            <span class="mock-hz">SSE · 3.7Hz · Lap 34/58</span>
-          </div>
-          <div style="padding:0 8px;">
-            <div class="timing-row">
-              <div class="pos">1</div><div class="code">NOR</div><div class="team-name">McLaren</div>
-              <div class="gap-t" style="color:var(--y);">LEADER</div>
-              <div class="lap-t">1:20.123</div>
-              <div class="tyre-bubble" style="background:#ef4444;"><span style="color:#fff;">S</span></div>
-              <div class="spd">312</div>
-            </div>
-            <div class="timing-row">
-              <div class="pos">2</div><div class="code">VER</div><div class="team-name">Red Bull</div>
-              <div class="gap-t" style="color:#d4d4d4;">+0.412</div>
-              <div class="lap-t">1:20.535</div>
-              <div class="tyre-bubble" style="background:var(--y);"><span style="color:#000;">M</span></div>
-              <div class="spd">308</div>
-            </div>
-            <div class="timing-row">
-              <div class="pos">3</div><div class="code">PIA</div><div class="team-name">McLaren</div>
-              <div class="gap-t" style="color:#d4d4d4;">+1.108</div>
-              <div class="lap-t">1:21.231</div>
-              <div class="tyre-bubble" style="background:#ef4444;"><span style="color:#fff;">S</span></div>
-              <div class="spd">310</div>
-            </div>
-            <div class="timing-row">
-              <div class="pos">4</div><div class="code">RUS</div><div class="team-name">Mercedes</div>
-              <div class="gap-t" style="color:#d4d4d4;">+3.402</div>
-              <div class="lap-t">1:21.504</div>
-              <div class="tyre-bubble" style="background:var(--y);"><span style="color:#000;">M</span></div>
-              <div class="spd">305</div>
-            </div>
-            <div class="timing-row">
-              <div class="pos">5</div><div class="code">LEC</div><div class="team-name">Ferrari</div>
-              <div class="gap-t" style="color:#d4d4d4;">+5.811</div>
-              <div class="lap-t">1:21.722</div>
-              <div class="tyre-bubble" style="background:#e5e5e5;"><span style="color:#000;">H</span></div>
-              <div class="spd">302</div>
-            </div>
-          </div>
+      <div class="specs-grid" style="grid-template-columns:repeat(4,1fr);">
+        <div class="spec-cell" style="border-right:2px solid #e5e5e5;background:#fff;">
+          <div class="spec-num" style="color:var(--b);">213</div><div class="section-label">Git commits</div>
+        </div>
+        <div class="spec-cell" style="border-right:2px solid #e5e5e5;background:#fafaf7;">
+          <div class="spec-num" style="color:var(--b);">24</div><div class="section-label">Race weekends live</div>
+        </div>
+        <div class="spec-cell" style="border-right:2px solid #e5e5e5;background:#fff;">
+          <div class="spec-num" style="color:var(--b);">22</div><div class="section-label">Drivers tracked live</div>
+        </div>
+        <div class="spec-cell" style="background:#fafaf7;">
+          <div class="spec-num" style="color:var(--b);">2</div><div class="section-label">Production hosts</div>
         </div>
       </div>
-    </div>
 
-    <div class="proof-split-grid" style="margin-bottom:64px;">
-      <div>
-        <div class="section-label">Scoring System</div>
-        <div style="margin-top:16px;">
-          <div class="scoring-row"><span class="scoring-key">Driver picks (P1–P22)</span><span class="scoring-val">Exact: +2 · Off by N: −N</span></div>
-          <div class="scoring-row"><span class="scoring-key">Constructor picks</span><span class="scoring-val">Tied range — no penalty</span></div>
-          <div class="scoring-row"><span class="scoring-key">Wildcards</span><span class="scoring-val">+5 pts each if correct</span></div>
-          <div class="scoring-row"><span class="scoring-key">WDC season pick</span><span class="scoring-val">+50 pts if correct</span></div>
-          <div class="scoring-row"><span class="scoring-key">WCC season pick</span><span class="scoring-val">+25 pts if correct</span></div>
-          <div class="scoring-row"><span class="scoring-key">No submission</span><span class="scoring-val">Lowest score − 5</span></div>
+      <div class="build-body">
+        <div class="build-story">
+          <div class="section-label">What I Solved</div>
+          <p>I did not just build a prediction form. I designed the system around it: submission lock rules, fairness logic for edge cases, scoring mechanics, no-show penalties, live data connections, and production reliability across race weekends.</p>
+          <p>The experience is powered by my own F1 API via SSE, which means the frontend was designed around real-time timing, telemetry, tyre data, pit events, team radio, and race-control context instead of static results pages.</p>
+          <p>This is the kind of work that sits between product judgment, backend thinking, data architecture, and user experience. That mix is exactly what I want this portfolio to prove.</p>
         </div>
-      </div>
-      <div>
-        <div class="section-label">Live Prediction Card</div>
-        <div style="margin-top:16px;">
-          <div class="mock-pred">
-            <div class="pred-bar">
-              <span class="pred-bar-label">Your Predictions · Locked</span>
-              <span class="pred-lock">Locked 1min before Q</span>
+        <div style="position:sticky;top:80px;">
+          <div class="mock-timing">
+            <div class="mock-bar">
+              <div class="mock-bar-left">
+                <span class="live-red"></span>
+                <span class="mock-label">Live Timing · Race</span>
+              </div>
+              <span class="mock-hz">SSE · 3.7Hz · Lap 34/58</span>
             </div>
-            <div class="pred-row" style="background:rgba(34,197,94,0.04)">
-              <span class="pred-pos">P1</span><span class="pred-name">Lando Norris</span>
-              <span class="pred-pts" style="color:#16a34a;">+2 pts</span><span class="pred-check">✓</span>
-            </div>
-            <div class="pred-row" style="background:rgba(34,197,94,0.04)">
-              <span class="pred-pos">P2</span><span class="pred-name">Max Verstappen</span>
-              <span class="pred-pts" style="color:#16a34a;">+2 pts</span><span class="pred-check">✓</span>
-            </div>
-            <div class="pred-row" style="background:rgba(239,68,68,0.04)">
-              <span class="pred-pos">P3</span><span class="pred-name">Oscar Piastri</span>
-              <span class="pred-pts" style="color:#dc2626;">-1 pt</span><span class="pred-check">✗</span>
-            </div>
-            <div class="pred-row" style="background:rgba(34,197,94,0.04)">
-              <span class="pred-pos">P10</span><span class="pred-name">Lewis Hamilton</span>
-              <span class="pred-pts" style="color:#16a34a;">+2 pts</span><span class="pred-check">✓</span>
-            </div>
-            <div class="pred-footer">
-              <span class="pred-round">Round Score</span>
-              <span class="pred-score">+5 pts</span>
+            <div style="padding:0 8px;">
+              <div class="timing-row">
+                <div class="pos">1</div><div class="code">NOR</div><div class="team-name">McLaren</div>
+                <div class="gap-t" style="color:var(--y);">LEADER</div>
+                <div class="lap-t">1:20.123</div>
+                <div class="tyre-bubble" style="background:#ef4444;"><span style="color:#fff;">S</span></div>
+                <div class="spd">312</div>
+              </div>
+              <div class="timing-row">
+                <div class="pos">2</div><div class="code">VER</div><div class="team-name">Red Bull</div>
+                <div class="gap-t" style="color:#d4d4d4;">+0.412</div>
+                <div class="lap-t">1:20.535</div>
+                <div class="tyre-bubble" style="background:var(--y);"><span style="color:#000;">M</span></div>
+                <div class="spd">308</div>
+              </div>
+              <div class="timing-row">
+                <div class="pos">3</div><div class="code">PIA</div><div class="team-name">McLaren</div>
+                <div class="gap-t" style="color:#d4d4d4;">+1.108</div>
+                <div class="lap-t">1:21.231</div>
+                <div class="tyre-bubble" style="background:#ef4444;"><span style="color:#fff;">S</span></div>
+                <div class="spd">310</div>
+              </div>
+              <div class="timing-row">
+                <div class="pos">4</div><div class="code">RUS</div><div class="team-name">Mercedes</div>
+                <div class="gap-t" style="color:#d4d4d4;">+3.402</div>
+                <div class="lap-t">1:21.504</div>
+                <div class="tyre-bubble" style="background:var(--y);"><span style="color:#000;">M</span></div>
+                <div class="spd">305</div>
+              </div>
+              <div class="timing-row">
+                <div class="pos">5</div><div class="code">LEC</div><div class="team-name">Ferrari</div>
+                <div class="gap-t" style="color:#d4d4d4;">+5.811</div>
+                <div class="lap-t">1:21.722</div>
+                <div class="tyre-bubble" style="background:#e5e5e5;"><span style="color:#000;">H</span></div>
+                <div class="spd">302</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="stack-row">
-      <div class="section-label">Stack</div>
-      <div class="stack-tags">
-        <span class="stack-tag">Node.js 18</span>
-        <span class="stack-tag">Express</span>
-        <span class="stack-tag">Turso / libSQL</span>
-        <span class="stack-tag">Google OAuth 2.0</span>
-        <span class="stack-tag">JWT</span>
-        <span class="stack-tag">Vanilla JS / HTML / CSS</span>
-        <span class="stack-tag">PWA</span>
-        <span class="stack-tag">SSE</span>
-        <span class="stack-tag">Discord Webhooks</span>
-        <span class="stack-tag">Render + Northflank</span>
+      <div class="proof-split-grid" style="margin-bottom:64px;">
+        <div>
+          <div class="section-label">Scoring System</div>
+          <div style="margin-top:16px;">
+            <div class="scoring-row"><span class="scoring-key">Driver picks (P1–P22)</span><span class="scoring-val">Exact: +2 · Off by N: −N</span></div>
+            <div class="scoring-row"><span class="scoring-key">Constructor picks</span><span class="scoring-val">Tied range — no penalty</span></div>
+            <div class="scoring-row"><span class="scoring-key">Wildcards</span><span class="scoring-val">+5 pts each if correct</span></div>
+            <div class="scoring-row"><span class="scoring-key">WDC season pick</span><span class="scoring-val">+50 pts if correct</span></div>
+            <div class="scoring-row"><span class="scoring-key">WCC season pick</span><span class="scoring-val">+25 pts if correct</span></div>
+            <div class="scoring-row"><span class="scoring-key">No submission</span><span class="scoring-val">Lowest score − 5</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="section-label">Live Prediction Card</div>
+          <div style="margin-top:16px;">
+            <div class="mock-pred">
+              <div class="pred-bar">
+                <span class="pred-bar-label">Your Predictions · Locked</span>
+                <span class="pred-lock">Locked 1min before Q</span>
+              </div>
+              <div class="pred-row" style="background:rgba(34,197,94,0.04)">
+                <span class="pred-pos">P1</span><span class="pred-name">Lando Norris</span>
+                <span class="pred-pts" style="color:#16a34a;">+2 pts</span><span class="pred-check">✓</span>
+              </div>
+              <div class="pred-row" style="background:rgba(34,197,94,0.04)">
+                <span class="pred-pos">P2</span><span class="pred-name">Max Verstappen</span>
+                <span class="pred-pts" style="color:#16a34a;">+2 pts</span><span class="pred-check">✓</span>
+              </div>
+              <div class="pred-row" style="background:rgba(239,68,68,0.04)">
+                <span class="pred-pos">P3</span><span class="pred-name">Oscar Piastri</span>
+                <span class="pred-pts" style="color:#dc2626;">-1 pt</span><span class="pred-check">✗</span>
+              </div>
+              <div class="pred-row" style="background:rgba(34,197,94,0.04)">
+                <span class="pred-pos">P10</span><span class="pred-name">Lewis Hamilton</span>
+                <span class="pred-pts" style="color:#16a34a;">+2 pts</span><span class="pred-check">✓</span>
+              </div>
+              <div class="pred-footer">
+                <span class="pred-round">Round Score</span>
+                <span class="pred-score">+5 pts</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="proves">
-      <p style="color:var(--b);">Proof of end-to-end ownership: product design, logic design, backend integration, live reliability, and execution without needing a team around me.</p>
-    </div>
-    <div class="build-links">
-      <a href="https://f1-predictor-league.onrender.com" target="_blank" rel="noreferrer" class="btn-live"><span class="live-dot"></span> Open Live App →</a>
-      <a href="https://github.com/harsh779/f1-predictor-league" target="_blank" rel="noreferrer" class="btn-repo">GitHub Repo</a>
-    </div>
+
+      <div class="stack-row">
+        <div class="section-label">Stack</div>
+        <div class="stack-tags">
+          <span class="stack-tag">Node.js 18</span>
+          <span class="stack-tag">Express</span>
+          <span class="stack-tag">Turso / libSQL</span>
+          <span class="stack-tag">Google OAuth 2.0</span>
+          <span class="stack-tag">JWT</span>
+          <span class="stack-tag">Vanilla JS / HTML / CSS</span>
+          <span class="stack-tag">PWA</span>
+          <span class="stack-tag">SSE</span>
+          <span class="stack-tag">Discord Webhooks</span>
+          <span class="stack-tag">Render + Northflank</span>
+        </div>
+      </div>
+      <div class="proves">
+        <p style="color:var(--b);">Proof of end-to-end ownership: product design, logic design, backend integration, live reliability, and execution without needing a team around me.</p>
+      </div>
+      <div class="build-links">
+        <a href="https://f1-predictor-league.onrender.com" target="_blank" rel="noreferrer" class="btn-live"><span class="live-dot"></span> Open Live App →</a>
+        <a href="https://github.com/harsh779/f1-predictor-league" target="_blank" rel="noreferrer" class="btn-repo">GitHub Repo</a>
+      </div>
     </details>
 
   </div>
 </section>
 
+<!-- ======================================================== -->
+<!-- BUILD 02: F1 INSIGHTS API                                -->
+<!-- ======================================================== -->
 <section id="api" style="background:var(--b);border-bottom:4px solid var(--y);">
   <div class="section-inner">
     <div class="build-header">
@@ -1134,36 +1030,35 @@
       </div>
     </div>
 
-    
     <details class="build-details">
       <summary class="see-more-summary"></summary>
-<div class="specs-grid dark api-specs-grid">
-      <div class="spec-cell" style="border-right:1px solid #333;background:#0f0f0f;"><div class="spec-num" style="color:var(--y);">16</div><div class="section-label light">Topics</div></div>
-      <div class="spec-cell" style="border-right:1px solid #333;background:#111;"><div class="spec-num" style="color:var(--y);">14</div><div class="section-label light">Endpoints</div></div>
-      <div class="spec-cell" style="border-right:1px solid #333;background:#0f0f0f;"><div class="spec-num" style="color:var(--y);">3.7Hz</div><div class="section-label light">SSE rate</div></div>
-      <div class="spec-cell" style="border-right:1px solid #333;background:#111;"><div class="spec-num" style="color:var(--y);">0</div><div class="section-label light">3rd-party deps</div></div>
-      <div class="spec-cell" style="border-right:1px solid #333;background:#0f0f0f;"><div class="spec-num" style="color:var(--y);">2018</div><div class="section-label light">Archive from</div></div>
-      <div class="spec-cell" style="background:#111;"><div class="spec-num" style="color:var(--y);">100/m</div><div class="section-label light">Rate limit</div></div>
-    </div>
-
-    <div class="build-body">
-      <div class="build-story">
-        <div class="section-label light">What I Solved</div>
-        <p class="light">I went directly to the live timing source instead of building on top of public wrappers. That meant handling live topics, differential patch updates, binary decompression, state modeling, reconnect logic, and disk persistence myself.</p>
-        <p class="light">On top of that, I exposed the system as something usable: REST endpoints, SSE streams, optional API keys, rate limiting, CSV export, and calculated standings built from saved results.</p>
-        <p class="light">For hiring managers, this matters because it shows real engineering judgment: not just calling an API, but designing one around reliability, structure, and practical use.</p>
+      <div class="specs-grid dark api-specs-grid">
+        <div class="spec-cell" style="border-right:1px solid #333;background:#0f0f0f;"><div class="spec-num" style="color:var(--y);">16</div><div class="section-label light">Topics</div></div>
+        <div class="spec-cell" style="border-right:1px solid #333;background:#111;"><div class="spec-num" style="color:var(--y);">14</div><div class="section-label light">Endpoints</div></div>
+        <div class="spec-cell" style="border-right:1px solid #333;background:#0f0f0f;"><div class="spec-num" style="color:var(--y);">3.7Hz</div><div class="section-label light">SSE rate</div></div>
+        <div class="spec-cell" style="border-right:1px solid #333;background:#111;"><div class="spec-num" style="color:var(--y);">0</div><div class="section-label light">3rd-party deps</div></div>
+        <div class="spec-cell" style="border-right:1px solid #333;background:#0f0f0f;"><div class="spec-num" style="color:var(--y);">2018</div><div class="section-label light">Archive from</div></div>
+        <div class="spec-cell" style="background:#111;"><div class="spec-num" style="color:var(--y);">100/m</div><div class="section-label light">Rate limit</div></div>
       </div>
-      <div style="position:sticky;top:80px;">
-        <div class="mock-api">
-          <div class="mac-bar">
-            <div class="mac-dots">
-              <span class="mac-dot" style="background:#ef4444;"></span>
-              <span class="mac-dot" style="background:var(--y);"></span>
-              <span class="mac-dot" style="background:var(--g);"></span>
+
+      <div class="build-body">
+        <div class="build-story">
+          <div class="section-label light">What I Solved</div>
+          <p class="light">I went directly to the live timing source instead of building on top of public wrappers. That meant handling live topics, differential patch updates, binary decompression, state modeling, reconnect logic, and disk persistence myself.</p>
+          <p class="light">On top of that, I exposed the system as something usable: REST endpoints, SSE streams, optional API keys, rate limiting, CSV export, and calculated standings built from saved results.</p>
+          <p class="light">For hiring managers, this matters because it shows real engineering judgment: not just calling an API, but designing one around reliability, structure, and practical use.</p>
+        </div>
+        <div style="position:sticky;top:80px;">
+          <div class="mock-api">
+            <div class="mac-bar">
+              <div class="mac-dots">
+                <span class="mac-dot" style="background:#ef4444;"></span>
+                <span class="mac-dot" style="background:var(--y);"></span>
+                <span class="mac-dot" style="background:var(--g);"></span>
+              </div>
+              <span class="endpoint-label">GET /timing/1</span>
             </div>
-            <span class="endpoint-label">GET /timing/1</span>
-          </div>
-          <pre class="code-block">{
+            <pre class="code-block">{
   "driver_number": "1",
   "name": "Lando Norris",
   "position": "1",
@@ -1181,57 +1076,193 @@
     "drs_label": "active"
   }
 }</pre>
-          <div class="api-footer">
-            <span class="api-rate">Rate: 100 req/min · SSE: 3.7Hz</span>
-            <span class="api-ok">● 200 OK</span>
+            <div class="api-footer">
+              <span class="api-rate">Rate: 100 req/min · SSE: 3.7Hz</span>
+              <span class="api-ok">● 200 OK</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div style="margin-bottom:64px;">
-      <div class="ep-table">
-        <div class="ep-header"><span class="ep-header-label">Endpoint Reference</span></div>
-        <div class="ep-grid">
-          <div class="ep-cell"><div class="ep-path">GET /timing</div><div class="ep-desc">Full leaderboard · positions, gaps, sectors, speed traps, telemetry</div></div>
-          <div class="ep-cell"><div class="ep-path">GET /telemetry/stream/:n</div><div class="ep-desc">SSE · single driver at 3.7Hz · rpm, speed, gear, throttle, brake, DRS</div></div>
-          <div class="ep-cell"><div class="ep-path">GET /pits</div><div class="ep-desc">All drivers · stint history, current tyre, in/out flags</div></div>
-          <div class="ep-cell"><div class="ep-path">GET /team-radio</div><div class="ep-desc">Live radio messages · audio_url direct to F1 CDN</div></div>
-          <div class="ep-cell"><div class="ep-path">GET /race-control</div><div class="ep-desc">Flags, penalties, safety car, FIA decisions</div></div>
-          <div class="ep-cell"><div class="ep-path">GET /calendar/next</div><div class="ep-desc">Next session · countdown, sprint flag, track data</div></div>
-          <div class="ep-cell"><div class="ep-path">GET /standings/drivers</div><div class="ep-desc">Championship standings · calculated from saved results</div></div>
-          <div class="ep-cell"><div class="ep-path">GET /history/:year</div><div class="ep-desc">Full F1 archive · every session back to 2018</div></div>
+      <div style="margin-bottom:64px;">
+        <div class="ep-table">
+          <div class="ep-header"><span class="ep-header-label">Endpoint Reference</span></div>
+          <div class="ep-grid">
+            <div class="ep-cell"><div class="ep-path">GET /timing</div><div class="ep-desc">Full leaderboard · positions, gaps, sectors, speed traps, telemetry</div></div>
+            <div class="ep-cell"><div class="ep-path">GET /telemetry/stream/:n</div><div class="ep-desc">SSE · single driver at 3.7Hz · rpm, speed, gear, throttle, brake, DRS</div></div>
+            <div class="ep-cell"><div class="ep-path">GET /pits</div><div class="ep-desc">All drivers · stint history, current tyre, in/out flags</div></div>
+            <div class="ep-cell"><div class="ep-path">GET /team-radio</div><div class="ep-desc">Live radio messages · audio_url direct to F1 CDN</div></div>
+            <div class="ep-cell"><div class="ep-path">GET /race-control</div><div class="ep-desc">Flags, penalties, safety car, FIA decisions</div></div>
+            <div class="ep-cell"><div class="ep-path">GET /calendar/next</div><div class="ep-desc">Next session · countdown, sprint flag, track data</div></div>
+            <div class="ep-cell"><div class="ep-path">GET /standings/drivers</div><div class="ep-desc">Championship standings · calculated from saved results</div></div>
+            <div class="ep-cell"><div class="ep-path">GET /history/:year</div><div class="ep-desc">Full F1 archive · every session back to 2018</div></div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="stack-row">
-      <div class="section-label light">Stack</div>
-      <div class="stack-tags">
-        <span class="stack-tag dark">Node.js 18</span>
-        <span class="stack-tag dark">Express 5</span>
-        <span class="stack-tag dark">ws (WebSocket)</span>
-        <span class="stack-tag dark">zlib (built-in)</span>
-        <span class="stack-tag dark">Server-Sent Events</span>
-        <span class="stack-tag dark">express-rate-limit</span>
-        <span class="stack-tag dark">Docker</span>
-        <span class="stack-tag dark">Northflank</span>
+      <div class="stack-row">
+        <div class="section-label light">Stack</div>
+        <div class="stack-tags">
+          <span class="stack-tag dark">Node.js 18</span>
+          <span class="stack-tag dark">Express 5</span>
+          <span class="stack-tag dark">ws (WebSocket)</span>
+          <span class="stack-tag dark">zlib (built-in)</span>
+          <span class="stack-tag dark">Server-Sent Events</span>
+          <span class="stack-tag dark">express-rate-limit</span>
+          <span class="stack-tag dark">Docker</span>
+          <span class="stack-tag dark">Northflank</span>
+        </div>
+      </div>
+      <div class="proves" style="border-left-color:var(--y);">
+        <p style="color:#fff;">Proof of backend and infrastructure depth: live ingestion, state handling, streaming architecture, endpoint design, and production-minded reliability.</p>
+      </div>
+      <div class="build-links">
+        <a href="https://f1-live-api.onrender.com" target="_blank" rel="noreferrer" class="btn-live"><span class="live-dot"></span> Open Live API →</a>
+        <a href="https://github.com/harsh779/f1-live-api" target="_blank" rel="noreferrer" class="btn-repo dark">GitHub Repo</a>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- ======================================================== -->
+<!-- BUILD 03: YOUTUBE INTELLIGENCE                           -->
+<!-- ======================================================== -->
+<section id="yt-intelligence" style="background:#fff;border-bottom:4px solid var(--b);">
+  <div class="section-inner">
+    <div class="section-label">Featured Proof</div>
+    <div class="build-header" style="margin-top:20px;">
+      <div class="build-num" style="color:var(--b);">03</div>
+      <div>
+        <div class="build-tag">Consumer Intelligence · Live in Production</div>
+        <h2 class="build-h2" style="color:var(--b);">YouTube<br>Intelligence</h2>
+        <p class="build-sub">A production tool that closes the biggest blind spot in social listening: the influence of YouTube creators on consumer perception and buying behaviour — and the audience reaction that follows.</p>
+        <p class="build-lead">Most social listening tools monitor Twitter, Reddit, and news. None of them treat YouTubers as what they actually are: distributed, domain-expert consumer panels with high-trust, self-selected audiences. This tool does — and goes further by layering in comment-level audience reaction as a second, real-time signal.</p>
+        <div class="build-why">Why it matters: the $5B+ social listening industry is structurally blind to YouTube creator influence. A 15-minute creator teardown shifts purchase intent more than 50 tweets. Brands using traditional tools are missing one of the most commercially significant perception signals available.</div>
       </div>
     </div>
-    <div class="proves" style="border-left-color:var(--y);">
-      <p style="color:#fff;">Proof of backend and infrastructure depth: live ingestion, state handling, streaming architecture, endpoint design, and production-minded reliability.</p>
-    </div>
-    <div class="build-links">
-      <a href="https://f1-live-api.onrender.com" target="_blank" rel="noreferrer" class="btn-live"><span class="live-dot"></span> Open Live API →</a>
-      <a href="https://github.com/harsh779/f1-live-api" target="_blank" rel="noreferrer" class="btn-repo dark">GitHub Repo</a>
-    </div>
+
+    <details class="build-details">
+      <summary class="see-more-summary"></summary>
+
+      <div class="specs-grid" style="grid-template-columns:repeat(4,1fr);">
+        <div class="spec-cell" style="border-right:2px solid #e5e5e5;background:#fff;">
+          <div class="spec-num" style="color:var(--b);">19</div>
+          <div class="section-label">Markets supported</div>
+        </div>
+        <div class="spec-cell" style="border-right:2px solid #e5e5e5;background:#fafaf7;">
+          <div class="spec-num" style="color:var(--b);">2</div>
+          <div class="section-label">Signal layers: creator voice + audience comments</div>
+        </div>
+        <div class="spec-cell" style="border-right:2px solid #e5e5e5;background:#fff;">
+          <div class="spec-num" style="color:var(--b);">1</div>
+          <div class="section-label">Query to executive report</div>
+        </div>
+        <div class="spec-cell" style="background:#fafaf7;">
+          <div class="spec-num" style="color:var(--b);">0</div>
+          <div class="section-label">Comparable tools in mainstream social listening</div>
+        </div>
+      </div>
+
+      <div class="build-body">
+        <div class="build-story">
+          <div class="section-label">What I Solved</div>
+          <p>This is not a YouTube wrapper. The insight was recognising that creator-led perception sits entirely outside what social listening tools measure — and that the comment section is an underutilised signal layer that turns a creator's opinion into a measurable demand signal.</p>
+          <p>I designed the full pipeline: query intake with regional context → YouTube discovery → transcript extraction → aspect-based sentiment scoring → comment synthesis → persisted executive report. The architecture uses BullMQ and Redis for async processing at scale, with a fallback sample data mode so the app stays live even if the database is unavailable.</p>
+          <p>The gap this closes: brands spend heavily on social listening, but YouTubers — who drive more purchase intent than any text-based social platform in categories like consumer tech, beauty, and CPG — are invisible in that data. This doesn't miss them.</p>
+        </div>
+        <div style="position:sticky;top:80px;">
+          <div class="mock-report">
+            <div class="report-bar">
+              <div class="report-bar-left">
+                <span class="live-red"></span>
+                <span class="mock-label">Intelligence Report</span>
+              </div>
+              <span class="mock-hz">Sony WH-1000XM6 · India</span>
+            </div>
+            <div style="padding:14px 16px;background:#fff;">
+              <div class="signal-grid">
+                <div class="signal-card">
+                  <div class="signal-label">Creator Signal</div>
+                  <div class="signal-val" style="color:#16a34a;">Positive</div>
+                  <div class="signal-note">8 of 10 reviews</div>
+                </div>
+                <div class="signal-card">
+                  <div class="signal-label">Audience Reaction</div>
+                  <div class="signal-val" style="color:#16a34a;">High Intent</div>
+                  <div class="signal-note">4.2K comments analysed</div>
+                </div>
+              </div>
+              <div class="aspect-heading">Aspect-based Sentiment</div>
+              <div class="aspect-row"><span class="aspect-name">Noise cancellation</span><span class="badge-pos">+ Strong</span></div>
+              <div class="aspect-row"><span class="aspect-name">Battery life</span><span class="badge-pos">+ Positive</span></div>
+              <div class="aspect-row"><span class="aspect-name">Price-to-value</span><span class="badge-mix">~ Mixed</span></div>
+              <div class="aspect-row" style="border-bottom:none;"><span class="aspect-name">Comfort (long sessions)</span><span class="badge-neg">− Concern</span></div>
+              <div class="comment-highlight">
+                <div class="comment-highlight-label">Top Comment Theme</div>
+                <div class="comment-highlight-text">"Audience asking about XM5 as alternative — price anchoring risk visible in comments."</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proof-split-grid" style="margin-bottom:64px;">
+        <div>
+          <div class="section-label">Analysis Pipeline</div>
+          <div style="margin-top:16px;">
+            <div class="scoring-row"><span class="scoring-key">Query intake</span><span class="scoring-val">Product · brand · topic + region</span></div>
+            <div class="scoring-row"><span class="scoring-key">YouTube discovery</span><span class="scoring-val">Search, ranking, channel signals</span></div>
+            <div class="scoring-row"><span class="scoring-key">Transcript extraction</span><span class="scoring-val">Audio → text per creator</span></div>
+            <div class="scoring-row"><span class="scoring-key">Aspect-based sentiment</span><span class="scoring-val">Scored per topic dimension</span></div>
+            <div class="scoring-row"><span class="scoring-key">Comment synthesis</span><span class="scoring-val">Audience reaction layer</span></div>
+            <div class="scoring-row"><span class="scoring-key">Executive report</span><span class="scoring-val">Persisted · retrievable · ranked</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="section-label">The Gap This Closes</div>
+          <div style="margin-top:16px;">
+            <div class="scoring-row"><span class="scoring-key">Traditional social listening</span><span class="scoring-val">Twitter, Reddit, news mentions</span></div>
+            <div class="scoring-row"><span class="scoring-key">What they miss</span><span class="scoring-val">YouTube creators — entirely</span></div>
+            <div class="scoring-row"><span class="scoring-key">Why creators matter</span><span class="scoring-val">High-trust, high-intent audiences</span></div>
+            <div class="scoring-row"><span class="scoring-key">Comment layer</span><span class="scoring-val">Audience reaction = demand signal</span></div>
+            <div class="scoring-row"><span class="scoring-key">Regional context</span><span class="scoring-val">19 markets, one query</span></div>
+            <div class="scoring-row"><span class="scoring-key">Output</span><span class="scoring-val">Exec report — not a raw data dump</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack-row">
+        <div class="section-label">Stack</div>
+        <div class="stack-tags">
+          <span class="stack-tag">Next.js 16</span>
+          <span class="stack-tag">React 19</span>
+          <span class="stack-tag">TypeScript</span>
+          <span class="stack-tag">Prisma</span>
+          <span class="stack-tag">PostgreSQL</span>
+          <span class="stack-tag">BullMQ</span>
+          <span class="stack-tag">Redis</span>
+          <span class="stack-tag">Zod</span>
+          <span class="stack-tag">Docker</span>
+          <span class="stack-tag">Northflank</span>
+        </div>
+      </div>
+      <div class="proves">
+        <p style="color:var(--b);">Proof of product insight and systems thinking: identifying a real gap in a $5B market, designing the full perception intelligence pipeline from scratch, and shipping it to production — solo.</p>
+      </div>
+      <div class="build-links">
+        <a href="https://app--youtube-intelligence--qc9w4mr468wb.code.run/" target="_blank" rel="noreferrer" class="btn-live"><span class="live-dot"></span> Open Live App →</a>
+        <a href="https://github.com/harsh779/youtube-intelligence" target="_blank" rel="noreferrer" class="btn-repo">GitHub Repo</a>
+      </div>
     </details>
 
   </div>
 </section>
 
 
-
+<!-- ======================================================== -->
+<!-- ABOUT                                                    -->
+<!-- ======================================================== -->
 <section id="about" style="background:#fff;border-bottom:4px solid var(--b);">
   <div class="section-inner">
     <div class="section-label">About</div>
@@ -1262,7 +1293,7 @@
           Over the years, I have worked across almost every major type of data: PoS, sell-through and retailer data, transactional and CRM data, syndicated market data, planning and forecasting data, survey and qualitative research, digital and social data, and real-time event streams. That range is what makes me versatile. I am comfortable moving across sources, understanding what each one can and cannot tell you, and combining them into a clearer view of the business.
         </p>
         <p class="about-p">
-          I have also worked on predictive modelling, planning, KPI design, dashboards, and decision systems — especially in contexts where the goal is not just to analyse the past, but to improve what happens next. Social listening is part of that toolkit, but not the centre of it. The bigger story is breadth: I can work across almost any data environment and turn it into something useful, structured, and actionable.
+          I have also worked on predictive modelling, planning, KPI design, dashboards, and decision systems — especially in contexts where the goal is not just to analyse the past, but to improve what happens next. Social listening is part of that toolkit — and I have gone further, building a production-grade perception intelligence tool that surfaces creator-led consumer signals that mainstream platforms miss entirely. The bigger story is breadth: I can work across almost any data environment and turn it into something useful, structured, and actionable.
         </p>
 
         <div class="expertise-block">
@@ -1356,6 +1387,7 @@
 
     <div class="contact-role-tags">
       <span class="contact-role-tag">PoS / Retail</span>
+      <span class="contact-role-tag">Consumer Intelligence</span>
       <span class="contact-role-tag">FMCG / CPG</span>
       <span class="contact-role-tag">Dashboards</span>
       <span class="contact-role-tag">Pricing / Promo</span>
@@ -1391,7 +1423,6 @@
         </div>
         <span class="contact-link-arrow">↗</span>
       </a>
-
       <a href="https://calendly.com/harsh779/30min" target="_blank" rel="noreferrer" class="contact-link">
         <div>
           <div class="contact-link-label">Calendly</div>
@@ -1432,8 +1463,8 @@
 
 <script>
   function applyViewportFixes() {
-    const w = window.innerWidth || document.documentElement.clientWidth;
-    const proof = document.querySelector('.proof-split-grid');
+    var w = window.innerWidth || document.documentElement.clientWidth;
+    var proof = document.querySelector('.proof-split-grid');
     if (proof) {
       proof.style.display = 'grid';
       proof.style.gridTemplateColumns = w <= 768 ? '1fr' : '1fr 1fr';
@@ -1442,8 +1473,7 @@
       proof.style.maxWidth = '100%';
       proof.style.minWidth = '0';
     }
-
-    document.querySelectorAll('.api-specs-grid').forEach((el) => {
+    document.querySelectorAll('.api-specs-grid').forEach(function(el) {
       el.style.display = 'grid';
       el.style.gridTemplateColumns = w <= 768 ? 'repeat(2, 1fr)' : 'repeat(6, 1fr)';
       el.style.width = '100%';
@@ -1455,50 +1485,40 @@
   window.addEventListener('resize', applyViewportFixes);
 </script>
 
-
 <script>
-  // Services accordion (click a card to expand)
   (function initServices(){
-    const cards = Array.from(document.querySelectorAll('.service-card'));
+    var cards = Array.from(document.querySelectorAll('.service-card'));
     if (!cards.length) return;
-
     function setActive(activeCard) {
-      cards.forEach((c) => {
+      cards.forEach(function(c) {
         c.classList.toggle('active', c === activeCard);
-        const t = c.querySelector('.service-toggle');
+        var t = c.querySelector('.service-toggle');
         if (t) t.textContent = (c === activeCard) ? '–' : '+';
       });
     }
-
-    const firstActive = cards.find(c => c.classList.contains('active')) || cards[0];
+    var firstActive = cards.find(function(c){ return c.classList.contains('active'); }) || cards[0];
     setActive(firstActive);
-
-    cards.forEach((card) => {
-      card.addEventListener('click', () => setActive(card));
+    cards.forEach(function(card) {
+      card.addEventListener('click', function(){ setActive(card); });
     });
   })();
 
-  // Copy brief
   (function initCopy(){
-    const btn = document.querySelector('.brief-copy');
+    var btn = document.querySelector('.brief-copy');
     if (!btn) return;
-    btn.addEventListener('click', async () => {
-      const sel = btn.getAttribute('data-copy');
-      const el = sel ? document.querySelector(sel) : null;
-      const text = el ? el.textContent : '';
+    btn.addEventListener('click', async function() {
+      var sel = btn.getAttribute('data-copy');
+      var el = sel ? document.querySelector(sel) : null;
+      var text = el ? el.textContent : '';
       try {
         await navigator.clipboard.writeText(text || '');
         btn.textContent = 'Copied';
-        setTimeout(() => (btn.textContent = 'Copy'), 1200);
+        setTimeout(function(){ btn.textContent = 'Copy'; }, 1200);
       } catch (e) {
-        // fallback: select text (or show prompt)
         if (!el) return;
-        const selection = window.getSelection && window.getSelection();
-        if (!selection) {
-          window.prompt('Copy the brief:', text || '');
-          return;
-        }
-        const range = document.createRange();
+        var selection = window.getSelection && window.getSelection();
+        if (!selection) { window.prompt('Copy the brief:', text || ''); return; }
+        var range = document.createRange();
         range.selectNodeContents(el);
         selection.removeAllRanges();
         selection.addRange(range);
@@ -1506,44 +1526,27 @@
     });
   })();
 
-
-  // Send brief (prefill email with the brief template)
   (function initSendBrief(){
-    const link = document.getElementById('sendBriefLink');
+    var link = document.getElementById('sendBriefLink');
     if (!link) return;
-
-    const briefEl = document.getElementById('briefText');
-
+    var briefEl = document.getElementById('briefText');
     function getEmail(){
-      const href = link.getAttribute('href') || '';
-      const match = href.match(/^mailto:([^?]+)/i);
+      var href = link.getAttribute('href') || '';
+      var match = href.match(/^mailto:([^?]+)/i);
       if (match && match[1]) return match[1].trim();
       return '';
     }
-
-    link.addEventListener('click', (e) => {
-      const email = getEmail();
+    link.addEventListener('click', function(e) {
+      var email = getEmail();
       if (!email) return;
-
       e.preventDefault();
-
-      const subject = link.getAttribute('data-subject') || 'Freelance analytics / automation project';
-      const brief = (briefEl && briefEl.textContent) ? briefEl.textContent.trim() : '';
-
-      const body = `Hi Harsh,
-
-${brief}
-
-Thanks,
-`;
-
-      // 1) Try Gmail compose (works even when mailto handler isn't configured)
-      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      const opened = window.open(gmailUrl, '_blank', 'noopener,noreferrer');
-
-      // 2) Fallback to mailto if popups are blocked
+      var subject = link.getAttribute('data-subject') || 'Freelance analytics / automation project';
+      var brief = (briefEl && briefEl.textContent) ? briefEl.textContent.trim() : '';
+      var body = 'Hi Harsh,\n\n' + brief + '\n\nThanks,\n';
+      var gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(email) + '&su=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      var opened = window.open(gmailUrl, '_blank', 'noopener,noreferrer');
       if (!opened) {
-        const mailto = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        var mailto = 'mailto:' + email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
         window.location.href = mailto;
       }
     });
@@ -1551,5 +1554,4 @@ Thanks,
 </script>
 
 </body>
-
 </html>

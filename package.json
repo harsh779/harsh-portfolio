@@ -1,0 +1,25 @@
+{
+  "name": "harsh-portfolio",
+  "version": "1.0.0",
+  "description": "Harsh's freelance portfolio showcasing analytics and AI automation work",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build required'",
+    "test": "echo 'No tests configured'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harsh779/harsh-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harsh779/harsh-portfolio/issues"
+  },
+  "homepage": "https://github.com/harsh779/harsh-portfolio#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}
